@@ -4,7 +4,7 @@
 total 总共需要上传的文件个数
 bucket_name 桶的名字，不需要包含s3:// 前缀
 local_dir 本地文件的路径
-concurrent 并发度
+max_workers 最大线程数来模拟并发度
 """
 import os.path
 import threading
