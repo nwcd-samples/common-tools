@@ -21,12 +21,12 @@ current = 0
 bucket_name = "cunxin-bucket"
 # 本地文件路径
 local_dir = "/Users/aqiao/Work/WorkDocs/"
-# 并行度（并发）
-concurrent = 5
+# 最大并行度
+max_workers = 5
 
 mutex = threading.Lock()
 # 创建线程池，最多维护10个线程。
-pool = ThreadPoolExecutor(concurrent)
+pool = ThreadPoolExecutor(max_workers)
 
 
 def upload_task(full_name, file_name):
